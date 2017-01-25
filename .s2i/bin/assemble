@@ -137,8 +137,7 @@ if [ x"ARTIFACTORY_URL" != "x" ]; then
 
     DEPLOYABLE_FULL_PATH="${ARTIFACTORY_URL}/${GROUP_SECTION}/${ARTIFACT_ID}/${ARTIFACT_VERSION}/${DEPLOYABLE_NAME}"
     echo "Started CURL Download from $DEPLOYABLE_FULL_PATH"
-    curl -L ${DEPLOYABLE_FULL_PATH} -o ${DEPLOY_DIR}/ROOT.${ARTIFACT_EXTENSION}
-
+    curl -L ${DEPLOYABLE_FULL_PATH} -o ${DEPLOY_DIR}/${DEPLOYABLE_NAME}
     if [ 0 -eq $? ]; then
       echo "Download complete"
     else
