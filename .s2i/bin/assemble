@@ -1,6 +1,6 @@
 #!/bin/sh
 # Global S2I variable setup
-source `dirname "$0"`/s2i-setup
+source `dirname "$0"`/usr/local/s2i-setup
 
 # Maven arguments setting up the environment
 maven_env_args="-Dmaven.repo.local=${S2I_ARTIFACTS_DIR}/m2"
