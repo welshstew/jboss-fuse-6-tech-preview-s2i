@@ -144,6 +144,7 @@ if [ x"ARTIFACTORY_URL" != "x"]
     else
       echo "Failed to Download Release Deployable"
       exit 1
+    fi
 elif [ -f "${S2I_SOURCE_DIR}/pom.xml" ]; then
   echo "Maven build detected"
   # If a pom.xml is present use maven
